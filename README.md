@@ -1,5 +1,5 @@
 # Credit Default Risk
-a project by Jeff North, Julian Estrada, and William Walker 
+
 
 
 Our aim is to create a machine learning model that will predict which Home Credit Group credit applicants will likely default on their credit loans, based on application and credit history features. We are using a (expired) competition from Kaggle named 
@@ -21,7 +21,7 @@ Using this same dataset, each member of our team chose to develop their own ML m
 
 
 # Binary Classification Neural Network
-by Jeff North
+
 
 I chose to use a Neural Network primarily because of the high dimensionality of the data. Our original dataset had 69 columns including the Target data, but after applying RandomForestClassifier (from SKLearn library) to determine Feature Importance, I reduced my dataset to 61 columns of training data, and 1 Target column of labeled outcomes. 
 
@@ -31,13 +31,13 @@ I started with a simple NN structure of 1 input layer with 61 units, 1 hidden la
 
 
 # Binary Classification Logistic Regression
-by Julian Estrada
+
 
 For this section I used linear regression, a form of supervised learning, in order to predict if the applicants would pay back their loan.  In order to start this I imported the necessary library Sklearn.  This is the algorithm I would be using to calculate accuracy score.  To prepare my data, I first had to set X and Y values.  We had prepared a dataframe of useful values such as income and credit that we decided would be used as X values.  For the Y value, we used the ‘target’ column.  This column had values as ‘0’ or ‘1’, indicating whether or not these individuals had paid back their loan.  This would be used to train our algorithm.  This leads us to the test_train_split step, where the training took place.  In order to deal with missing values, I decided to use SimpleImputer.  This is a strategy that fills in missing values with the average value for the respective column.  At this point, a logistic regression model was set in place.  The predicted values were  compared to the test label column to receive an accuracy score.  We were left with a 92% accuracy score using this method.  This indicates that with the specific variables chosen to construct our dataframe, combined with the algorithm methods chosen gave us a 92% accuracy in predicting whether or not an applicant would pay back their loan.  
 
 
 # Unsupervised Learning
-by William Walker
+
 
 I chose to do Unsupervised Machine Learning, both without and with PCA applied. I chose Unsupervised Learning because I was curious as to whether it would uncover some bias in the way Loan Applications are deemed risky. Whether it was banks overlooking a critical factor, or banks overthinking certain factors, There's no way to tell if any of these kinds of models would work without trying.
 
